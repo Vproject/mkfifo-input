@@ -18,12 +18,12 @@ $ ffmpeg.exe -i example.y4m -f yuv4mpegpipe -v -1 - | ./mkfifo-input.exe your_pi
 ```
 ####output
 ```
-Reading from stdin and writing to pipe \\\\.\\pipe\\your_pipename
+Reading from stdin and writing to pipe \\.\pipe\your_pipename
 ```
 
 ####start another process in a different shell that uses the pipe
 ```
-$ ffmpeg.exe -i \\\\\\\\.\\\\pipe\\\\your_pipename exampleout.y4m
+$ ffmpeg.exe -i \\\\.\\pipe\\your_pipename exampleout.y4m
 ```
 
 ####when both processes end, \\\\.\\pipe\\your_pipename is removed.
